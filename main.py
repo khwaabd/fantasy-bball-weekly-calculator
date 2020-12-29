@@ -134,10 +134,8 @@ for team in simple_teams:
 print(json.dumps(simple_teams, indent=2, sort_keys=True))
 
 winner_names = []
-for winner in winners:
-    for team in simple_teams:
-        if simple_teams[team]["key"] == winner:
-            winner_names.append(team)
+for team in simple_teams:
+    winner_names.append(team)
 
 #print(json.dumps(simple_teams, indent=2, sort_keys=True))
 print("Winners:")
