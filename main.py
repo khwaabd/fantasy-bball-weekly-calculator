@@ -9,7 +9,7 @@ sc = OAuth2(None, None, from_file='oauth2.json')
 gm = yfa.Game(sc, 'nba')
 #print(gm)
 
-lg = gm.to_league(gm.league_ids(year=2020)[0])
+lg = gm.to_league(gm.league_ids(year=2021)[1])
 #print(lg)
 
 stat_ids = {
@@ -25,7 +25,7 @@ stat_ids = {
 }
 
 
-matchups_ret = lg.matchups(week=1)
+matchups_ret = lg.matchups(week=4)
 matchups = matchups_ret['fantasy_content']['league'][1]['scoreboard']['0']['matchups']
 #print(json.dumps(matchups, indent=2, sort_keys=True))
 
@@ -138,7 +138,7 @@ for team in simple_teams:
     winner_names.append(team)
 
 #print(json.dumps(simple_teams, indent=2, sort_keys=True))
-print("Winners:")
+print("Eligible Teams:")
 print(json.dumps(winner_names, indent=2, sort_keys=True))
 
 max_wins = 0
