@@ -2,14 +2,16 @@ For my fantasy bbal team heres how to run this:
 
 you have to use a terminal sorry
 
-1. install git - look this up on your os, mac os should come with it
-2. install python3 - again look up for your os.. you also might need to pip install yahoo sports modules, 
-   just run the scripts they will tell you whats missing
-3. run in terminal, this will clone this repo into a folder
+install git - look this up on your os, mac os should come with it
 
-   git clone https://github.com/khwaabd/fantasy-bball-weekly-calculator.git  
-4. go into that folder
-   cd fantasy-bball-weekly-calculator
+install python3 - again look up for your os.. you also might need to pip install yahoo sports modules, just run the scripts they will tell you whats missing
+
+run this in terminal, this will clone this repo into a folder
+
+      git clone https://github.com/khwaabd/fantasy-bball-weekly-calculator.git  
+go into that folder
+
+      cd fantasy-bball-weekly-calculator
 
 to run a single week
 
