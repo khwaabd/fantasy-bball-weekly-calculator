@@ -164,11 +164,8 @@ for winner in winner_names:
 
 print("Weekly Winners (people who have minimum losses, calculated above):")
 print(weekly_winners)
-print("")
 
-if len(weekly_winners) == 1:
-    print("Congratulations")
-else:
+if not len(weekly_winners) == 1:
     print("We have a tie!!!, on to phase 3, who would have won from the above?")
     sub_teams = {}
     sub_teams_margins = {}
@@ -205,9 +202,7 @@ else:
     print("Phase 4 candidates:")
     print(phase_4_ties)
 
-    if len(phase_4_ties) == 1:
-        print("Congratulations!")
-    else:
+    if not len(phase_4_ties) == 1:
         print("We still have a tie!!!! on to phase 4, margins, lets sum up the margins of each defeat, the team with the highest total margin wins")
         print("here are the margins:")
         print(json.dumps(sub_teams_margins, indent = 2, sort_keys = True))

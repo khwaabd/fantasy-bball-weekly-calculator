@@ -19,6 +19,6 @@ done
 for i in $(seq $start $end)
 do
     echo "Winner for $year $i is"
-    cat $year-week$i.txt | grep "Weekly Winners" -A 3 | grep "\["
+    tail -n 1 $year-week$i.txt
 done
 
