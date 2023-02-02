@@ -6,8 +6,10 @@ you have to use a terminal sorry
 2. install python3 - again look up for your os.. you also might need to pip install yahoo sports modules, 
    just run the scripts they will tell you whats missing
 3. run in terminal, this will clone this repo into a folder
+
    git clone https://github.com/khwaabd/fantasy-bball-weekly-calculator.git  
-4. cd fantasy-bball-weekly-calculator
+4. go into that folder
+   cd fantasy-bball-weekly-calculator
 
 to run a single week
 
