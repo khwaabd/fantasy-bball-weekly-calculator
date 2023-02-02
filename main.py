@@ -2,6 +2,7 @@ from yahoo_oauth import OAuth2
 import yahoo_fantasy_api as yfa
 import json
 from collections.abc import Iterable
+import sys
 
 sc = OAuth2(None, None, from_file='oauth2.json')
 #print(sc)
@@ -9,7 +10,9 @@ sc = OAuth2(None, None, from_file='oauth2.json')
 gm = yfa.Game(sc, 'nba')
 #print(gm)
 
-lg = gm.to_league(gm.league_ids(year=2021)[1])
+year_num = sys.argv[2]
+#print(year_num)
+lg = gm.to_league(gm.league_ids(year=year_num)[0])
 #print(lg)
 
 stat_ids = {
@@ -24,8 +27,8 @@ stat_ids = {
         "19" : "TO"
 }
 
-
-matchups_ret = lg.matchups(week=4)
+week_num = sys.argv[1]
+matchups_ret = lg.matchups(week=week_num)
 matchups = matchups_ret['fantasy_content']['league'][1]['scoreboard']['0']['matchups']
 #print(json.dumps(matchups, indent=2, sort_keys=True))
 

@@ -1,0 +1,13 @@
+For my fantasy bbal team heres how to run this
+
+install python3
+
+to run a single week
+
+    python3 main.py <week number> <year number>
+
+week number is in the fantasy app, year number is the year the season started on so 2022 for 22'-23' season
+
+To run multiple weeks, and output a summary of winners (only works in shell, no cmd for windows, get powershell or a mac/linux u noob)
+
+    ./multi-week-runner <start week> <end week> <year>
