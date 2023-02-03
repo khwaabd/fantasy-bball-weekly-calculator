@@ -1,12 +1,23 @@
 import sys
 import os
+from yahoo_oauth import OAuth2
+import yahoo_fantasy_api as yfa
 
-weeks=int(sys.argv[1])
-year=str(sys.argv[2])
+
+sc = OAuth2(None, None, from_file='oauth2.json')
+#print(sc)
+
+gm = yfa.Game(sc, 'nba')
+#print(gm)
+
+year_num = sys.argv[1]
+#print(year_num)
+lg = gm.to_league(gm.league_ids(year=year_num)[0])
+weeks=lg.current_week()
 
 week_winners = {}
-for i in range(1, weeks+1):
-    stream = os.popen("python3 main.py " + str(i) + " " + year)
+for i in range(1, weeks):
+    stream = os.popen("python3 main.py " + str(i) + " " + year_num)
     output = stream.readlines()
     found = False
     for line in output:

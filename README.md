@@ -25,6 +25,5 @@ To run multiple weeks, and output a summary of winners this outputs a file calle
 
 Season totals - this will print out all weeks of the season, and a summary of totals at the end - this does write files
 
-    python3 season-totals.py <until week> <year number>
+    python3 season-totals.py <year number>
 
-until week is the week until you want totals of, so for totals of weeks 1-15 enter 15
